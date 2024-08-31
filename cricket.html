@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+
+    body {
+      background-color: blueviolet;
+    }
+    div {
+      display: inline-block;
+      justify-content: center;
+    }
+    button {
+      background-color: blueviolet;
+      margin: 50px;
+    
+    }
+    img {
+      border: 1px dashed black;
+      object-fit: cover;
+      height: 70px;
+      width: 120px;
+    }
+    h1{
+      display: contents;
+    text-align: center;
+    align-items: centers;
+    }
+  </style>
+  <title>Cricket Normal Game</title>
+</head>
+<body>
+<h1>Welcome Cricket World</h1>
+<h2> 
+  If Ball=wicket ; Ball win <br>
+  If Bat=Ball; Bat win;<br>
+  If Wicket=Bat; Wicket Win;
+</h2>
+
+<div id="div1">
+  <button onclick=" 
+    let z = Math.random() * 3;
+    document.querySelector('#h2').innerHTML = 'Your choice is Ball';
+    let computerchoice2;
+    if (z > 0 && z <= 1) {
+      computerchoice2 = 'Bat';
+    } else if (z > 1 && z <= 2) {
+      computerchoice2 = 'Ball';
+    } else {
+      computerchoice2 = 'Wicket';
+    }
+    document.querySelector('#h3').innerHTML = `Computer choice is ${computerchoice2}`;
+    if (computerchoice2 === 'Ball') {
+      document.querySelector('#h4').innerHTML = 'The game is tie';
+      score.tie++;
+    } else if (computerchoice2 === 'Wicket') {
+      document.querySelector('#h4').innerHTML = 'You win';
+      score.win++;
+    } else {
+      document.querySelector('#h4').innerHTML = 'You lose';
+      score.Lose++;
+    }
+    document.getElementById('h5').innerHTML = `Score: Win: ${score.win} Loss: ${score.Lose} Tie: ${score.tie}`;
+  ">
+    <img src="/vs js/depositphotos_24549981-stock-illustration-cricket-ball-in-fire-on.jpg" alt="">
+  </button>
+
+  <button onclick="
+    let x = Math.random() * 3;
+    document.querySelector('#h2').innerHTML = 'Your choice is Bat';
+    let computerchoice;
+    if (x > 0 && x <= 1) {
+      computerchoice = 'Bat';
+    } else if (x > 1 && x <= 2) {
+      computerchoice = 'Ball';
+    } else {
+      computerchoice = 'Wicket';
+    }
+    document.querySelector('#h3').innerHTML = `Computer choice is ${computerchoice}`;
+    if (computerchoice === 'Ball') {
+      document.querySelector('#h4').innerHTML = 'You win';
+      score.win++;
+    } else if (computerchoice === 'Wicket') {
+      document.querySelector('#h4').innerHTML = 'You lose';
+      score.Lose++;
+    } else {
+      document.querySelector('#h4').innerHTML = 'The game is tie';
+      score.tie++;
+    }
+    document.getElementById('h5').innerHTML = `Score: Win: ${score.win} Loss: ${score.Lose} Tie: ${score.tie}`;
+  ">
+    <img src="/vs js/6-top-cricket-bats-for-adults-for-effortless-performance.webp" alt="">
+  </button>
+
+  <button onclick=" 
+    let y = Math.random() * 3;
+    document.querySelector('#h2').innerHTML = 'Your choice is Wicket';
+    let computerchoice1;
+    if (y > 0 && y <= 1) {
+      computerchoice1 = 'Bat';
+    } else if (y > 1 && y <= 2) {
+      computerchoice1 = 'Ball';
+    } else {
+      computerchoice1 = 'Wicket';
+    }
+    document.querySelector('#h3').innerHTML = `Computer choice is ${computerchoice1}`;
+    if (computerchoice1 === 'Bat') {
+      document.querySelector('#h4').innerHTML = 'You win';
+      score.win++;
+    } else if (computerchoice1 === 'Wicket') {
+      document.querySelector('#h4').innerHTML = 'The game is tie';
+      score.tie++;
+    } else {
+      document.querySelector('#h4').innerHTML = 'You lose';
+      score.Lose++;
+    }
+    document.getElementById('h5').innerHTML = `Score: Win: ${score.win} Loss: ${score.Lose} Tie: ${score.tie}`;
+  ">
+    <img src="/vs js/cricket-wicket-500x500.webp" alt="">
+  </button>
+</div>
+
+<h2 id="h2"></h2>
+<h2 id="h3"></h2>
+<h2 id="h4"></h2>
+<h2 id="h5">Score: Win: 0 Loss: 0 Tie: 0</h2>
+
+<script>
+  let score = {
+    win: 0,
+    Lose: 0,
+    tie: 0
+  };
+</script>
+</body>
+</html>
